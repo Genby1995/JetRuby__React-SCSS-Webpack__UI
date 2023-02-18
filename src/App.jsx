@@ -51,7 +51,6 @@ function App() {
         axios
             .get(`${API_URL}/config`)
             .then((res) => {
-                console.log(res.data.config);
                 let inputsClone = Object.assign({}, inputs);
                 inputsClone.repoMaxAge_d = Math.round(
                     res.data.config.repoMaxAge / (1000 * 60 * 60 * 24)
